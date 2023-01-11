@@ -1,1 +1,4 @@
 docker/secret.env
+docker/caddy/config
+docker/caddy/data
+docker/caddy/logs
