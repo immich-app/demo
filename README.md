@@ -3,7 +3,7 @@ This repo contains the setup for the demo instance at https://demo.immich.app/
 You probably don't want to use this yourself. Instead, check out the install guide at https://docs.immich.app/docs/install/docker-compose
 
 To deploy:
-1. Have a server with docker and docker-compose setup, and exiftool installed
+1. Have a server with docker and docker-compose setup, and exiftool and jq installed
 2. Pull this repository
 
 Start the server:
