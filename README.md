@@ -9,8 +9,8 @@ To deploy:
 Start the server:
 
 3. `cd docker`
-4. `echo "JWT_SECRET=$(openssl rand -base64 48)" > secret.env.test`
-5. `docker-compose up -d`
+4. `echo "JWT_SECRET=$(openssl rand -base64 48)" > secret.env`
+5. `docker compose up -d`
 
 Prepare the dummy library:
 
