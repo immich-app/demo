@@ -24,5 +24,5 @@ docker compose up -d
 
 sudo iptables -D INPUT -p tcp --dport 80 -j DROP
 
-docker run --rm -v /home/ubuntu/demo/images:/import ghcr.io/immich-app/immich-cli:latest upload --email demo@immich.app --password demo --server https://demo.immich.app/api -d /import -y
+docker run --rm --network="demo_default" -v /home/ubuntu/demo/images:/import ghcr.io/immich-app/immich-cli:latest upload --email demo@immich.app --password demo --server immich-server -d /import -y
 docker system prune -f
