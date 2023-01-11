@@ -16,7 +16,7 @@ image_urls_page () {
 }
 
 main () {
-	mkdir $LIBRARY_FOLDER
+	mkdir -p $LIBRARY_FOLDER
 	cd $LIBRARY_FOLDER
 	local urls=""
 	for i in $(seq 0 $PAGE_SIZE $(($LIBRARY_SIZE-$PAGE_SIZE))); do
