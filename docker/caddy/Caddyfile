@@ -1,0 +1,6 @@
+demo.immich.app {
+	reverse_proxy immich-proxy:8080
+	log {
+		output file /logs/caddy.log
+	}
+}
