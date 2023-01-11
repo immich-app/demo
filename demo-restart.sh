@@ -28,5 +28,5 @@ accessToken=$(curl -d '{"email": "demo@immich.app", "password": "demo"}' -H "Con
 header="Authorization: Bearer ${accessToken}"
 apiKey=`curl -d '{"name": "Demo controller"}' -H "Content-Type: application/json" -H "$header" -X POST 127.0.0.1:3001/api-key | jq -r '.secret'`
 
-docker run --rm -v /home/ubuntu/demo/images:/import ghcr.io/immich-app/immich-cli:latest upload -key "$apiKey" --server https://demo.immich.app/api -d /import -y
+docker run --rm -v /home/ubuntu/demo/images:/import ghcr.io/immich-app/immich-cli:latest upload --key "$apiKey" --server https://demo.immich.app/api -d /import -y
 docker system prune -f
