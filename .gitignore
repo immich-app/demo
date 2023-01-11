@@ -1,5 +1,5 @@
-docker/secret.env
-docker/caddy/config
-docker/caddy/data
-docker/caddy/logs
+secret.env
+caddy/config
+caddy/data
+caddy/logs
 images/
