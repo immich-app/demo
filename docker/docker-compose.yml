@@ -92,10 +92,10 @@ services:
       - "443:443"
       - "443:443/udp"
     volumes:
-      - /home/ubuntu/immich/docker/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - /home/ubuntu/immich/docker/caddy/data:/data # Optional
-      - /home/ubuntu/immich/docker/caddy/config:/config # Optional
-      - /home/ubuntu/immich/docker/caddy/logs:/logs # Optional
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/data:/data # Optional
+      - ./caddy/config:/config # Optional
+      - ./caddy/logs:/logs # Optional
 
 volumes:
   pgdata:
