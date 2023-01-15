@@ -1,1 +1,1 @@
-0 * * * * /home/ubuntu/immich/demo-restart.sh
+0 * * * * /home/ubuntu/cron/demo-restart.sh
