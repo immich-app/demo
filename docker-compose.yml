@@ -33,19 +33,18 @@ services:
       - database
     restart: always
 
-  # immich-machine-learning:
-  #   image: ghcr.io/immich-app/immich-machine-learning:release
-  #   entrypoint: ["/bin/sh", "./entrypoint.sh"]
-  #   volumes:
-  #    - library:/usr/src/app/upload
-  #   env_file:
-  #   - .env
-  #   - secret.env
-  #   environment:
-  #    - NODE_ENV=production
-  #   depends_on:
-  #    - database
-  #   restart: always
+  immich-machine-learning:
+    image: ghcr.io/immich-app/immich-machine-learning:release
+    volumes:
+     - library:/usr/src/app/upload
+    env_file:
+    - .env
+    - secret.env
+    environment:
+     - NODE_ENV=production
+    depends_on:
+     - database
+    restart: always
 
   immich-web:
     image: ghcr.io/immich-app/immich-web:release
