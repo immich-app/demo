@@ -74,6 +74,17 @@ services:
       - pgdata:/var/lib/postgresql/data
     restart: always
 
+  typesense:
+    container_name: immich_typesense
+    image: typesense/typesense:0.24.0
+    environment:
+      - TYPESENSE_API_KEY
+      - TYPESENSE_DATA_DIR=/data
+    logging:
+      driver: none
+    volumes:
+      - tsdata:/data
+
   immich-proxy:
     container_name: immich_proxy
     image: ghcr.io/immich-app/immich-proxy:release
@@ -99,4 +110,4 @@ services:
 volumes:
   pgdata:
   library:
-
+  tsdata:
