@@ -1,1 +1,1 @@
-0 * * * * /home/ubuntu/demo/demo-restart.sh
+0 */4 * * * /home/ubuntu/demo/demo-restart.sh
