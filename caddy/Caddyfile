@@ -1,4 +1,12 @@
 demo.immich.app {
+	@update-config {
+		method PUT
+		path /api/system-config
+	}
+
+	respond /api/auth/change-password 403
+	respond @update-config 403
+
 	reverse_proxy immich-proxy:8080
 	log {
 		output file /logs/caddy.log
