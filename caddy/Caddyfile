@@ -4,8 +4,14 @@ demo.immich.app {
 		path /api/system-config
 	}
 
+	@update-user {
+		method PUT
+		path /api/user
+	}
+
 	respond /api/auth/change-password 403
 	respond @update-config 403
+	respond @update-user 403
 
 	reverse_proxy immich-proxy:8080
 	log {
