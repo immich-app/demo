@@ -16,8 +16,7 @@ curl --location --request POST '127.0.0.1:3001/auth/admin-sign-up' \
 --data-raw '{
     "email": "demo@immich.app",
     "password": "demo",
-    "firstName": "John",
-    "lastName": "Doe"
+    "name": "John Doe"
 }'
 
 docker compose up -d
