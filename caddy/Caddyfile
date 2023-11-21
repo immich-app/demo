@@ -13,7 +13,7 @@ demo.immich.app {
 	respond @update-config 403
 	respond @update-user 403
 
-	reverse_proxy immich-proxy:8080
+	reverse_proxy immich-server:3001
 	log {
 		output file /logs/caddy.log
 	}
