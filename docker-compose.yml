@@ -16,7 +16,6 @@ services:
     depends_on:
       - redis
       - database
-      - typesense
     restart: always
 
   immich-microservices:
@@ -32,7 +31,6 @@ services:
     depends_on:
       - redis
       - database
-      - typesense
     restart: always
 
   immich-machine-learning:
@@ -84,4 +82,3 @@ services:
 volumes:
   pgdata:
   library:
-  tsdata:
