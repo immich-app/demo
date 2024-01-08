@@ -8,9 +8,9 @@ services:
       - "127.0.0.1:3001:3001"
     volumes:
       - library:/usr/src/app/upload
+      - ./config.json:/config.json
     env_file:
       - .env
-      - secret.env
     environment:
       - NODE_ENV=production
     depends_on:
@@ -23,9 +23,9 @@ services:
     command: [ "start.sh", "microservices" ]
     volumes:
       - library:/usr/src/app/upload
+      - ./config.json:/config.json
     env_file:
       - .env
-      - secret.env
     environment:
       - NODE_ENV=production
     depends_on:
