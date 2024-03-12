@@ -1,0 +1,25 @@
+newVersionCheck:
+  enabled: false
+library:
+  scan:
+    enabled: false
+storageTemplate:
+  enabled: false
+server:
+  loginPageMessage: |
+    This is a demo instance of Immich. It is regularly reset. <br>
+  
+    Email: <i>demo@immich.app</i><br>
+    Password: <i>demo</i><br><br>
+    
+    <b style='color: red'>Due to abuse, uploads to this instance are disabled.</b><br><br>
+
+    <a class="underline" href="javascript:
+      email = document.getElementById('email');
+      email.value = 'demo@immich.app';
+      email.dispatchEvent(new Event('input'));
+      password = document.getElementById('password');
+      password.value = 'demo';
+      password.dispatchEvent(new Event('input'));
+      void(0);
+    ">Fill credentials</a>
