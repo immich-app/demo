@@ -27,7 +27,7 @@ services:
     env_file:
       - .env
     environment:
-     - NODE_ENV=production
+      - NODE_ENV=production
     depends_on:
       - redis
       - database
@@ -36,14 +36,14 @@ services:
   immich-machine-learning:
     image: ghcr.io/immich-app/immich-machine-learning:release
     volumes:
-      - library:/usr/src/app/upload
+     - library:/usr/src/app/upload
     env_file:
-     - .env
-     - secret.env
+    - .env
+    - secret.env
     environment:
      - NODE_ENV=production
     depends_on:
-      - database
+     - database
     restart: always
 
   redis:
