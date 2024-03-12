@@ -19,32 +19,32 @@ services:
     restart: always
 
   immich-microservices:
-  image: ghcr.io/immich-app/immich-server:release
-  command: [ "start.sh", "microservices" ]
-  volumes:
-  - library:/usr/src/app/upload
-  - ./config.json:/config.json
-  env_file:
-  - .env
-  environment:
-  - NODE_ENV=production
-  depends_on:
-  - redis
-  - database
-  restart: always
+    image: ghcr.io/immich-app/immich-server:release
+    command: [ "start.sh", "microservices" ]
+    volumes:
+      - library:/usr/src/app/upload
+      - ./config.json:/config.json
+    env_file:
+      - .env
+    environment:
+     - NODE_ENV=production
+    depends_on:
+      - redis
+      - database
+    restart: always
 
   immich-machine-learning:
-  image: ghcr.io/immich-app/immich-machine-learning:release
-  volumes:
-  - library:/usr/src/app/upload
-  env_file:
-  - .env
-  - secret.env
-  environment:
-  - NODE_ENV=production
-  depends_on:
-  - database
-  restart: always
+    image: ghcr.io/immich-app/immich-machine-learning:release
+    volumes:
+      - library:/usr/src/app/upload
+    env_file:
+     - .env
+     - secret.env
+    environment:
+     - NODE_ENV=production
+    depends_on:
+      - database
+    restart: always
 
   redis:
     container_name: immich_redis
