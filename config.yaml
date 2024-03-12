@@ -8,9 +8,6 @@ storageTemplate:
 server:
   loginPageMessage: |
     This is a demo instance of Immich. It is regularly reset. <br>
-  
-    Email: <i>demo@immich.app</i><br>
-    Password: <i>demo</i><br><br>
     
     <b style='color: red'>Due to abuse, uploads to this instance are disabled.</b><br><br>
 
@@ -21,5 +18,5 @@ server:
       password = document.getElementById('password');
       password.value = 'demo';
       password.dispatchEvent(new Event('input'));
-      void(0);
-    ">Fill credentials</a>
+      document.forms[0].requestSubmit();
+    ">Login as demo user</a>
