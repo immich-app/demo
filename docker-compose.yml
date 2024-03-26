@@ -8,7 +8,7 @@ services:
       - "127.0.0.1:3001:3001"
     volumes:
       - library:/usr/src/app/upload
-      - ./config.json:/config.json
+      - ./config.yaml:/config.yaml
     env_file:
       - .env
     environment:
