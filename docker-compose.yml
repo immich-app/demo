@@ -23,7 +23,7 @@ services:
     command: [ "start.sh", "microservices" ]
     volumes:
       - library:/usr/src/app/upload
-      - ./config.json:/config.json
+      - ./config.yaml:/config.yaml
     env_file:
       - .env
     environment:
