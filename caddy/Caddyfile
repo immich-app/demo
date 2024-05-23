@@ -14,6 +14,24 @@ demo.immich.app {
 		path /api/asset/upload
 	}
 
+	@cors_preflight method OPTIONS
+
+	header {
+		Access-Control-Allow-Origin "*"
+		Access-Control-Allow-Methods "*"
+		Access-Control-Allow-Headers "x-api-key, Authorization"
+		Access-Control-Allow-Credentials "true"
+		Vary Origin
+	}
+
+	handle @cors_preflight {
+		header {
+			Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE"
+			Access-Control-Max-Age "3600"
+		}
+		respond "" 204
+	}
+
 	respond /api/auth/change-password 403
 	respond @update-config 403
 	respond @update-user 403
