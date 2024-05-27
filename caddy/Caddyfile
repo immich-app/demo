@@ -9,6 +9,11 @@ demo.immich.app {
 		path /api/user
 	}
 
+	@set-profile-image {
+		method POST
+		path /api/user/profile-image
+	}
+
 	@upload-file {
 		method POST
 		path /api/asset/upload
@@ -35,6 +40,7 @@ demo.immich.app {
 	respond /api/auth/change-password 403
 	respond @update-config 403
 	respond @update-user 403
+	respond @set-profile-image 403
 	respond @upload-file 403
 
 	reverse_proxy immich-server:3001
