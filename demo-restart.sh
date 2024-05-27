@@ -3,6 +3,8 @@
 set -ex
 
 cd /home/ubuntu/demo
+git pull
+
 sudo iptables -A INPUT -p tcp --dport 80 -j DROP
 
 docker compose pull
