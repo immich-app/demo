@@ -1,11 +1,21 @@
 demo.immich.app {
-	@blocked-paths {
-		method PUT POST
+	@blocked-put {
+		method PUT
 		path /api/system-config
 		path /api/users/me
 		path /api/admin/users/*
 		path /api/users/profile-image
-		path /api/asset/upload
+		path /api/assets/original
+		path /api/auth/change-password
+	}
+
+	@blocked-post {
+		method POST
+		path /api/system-config
+		path /api/users/me
+		path /api/admin/users/*
+		path /api/users/profile-image
+		path /api/assets
 		path /api/auth/change-password
 	}
 
@@ -27,7 +37,8 @@ demo.immich.app {
 		respond "" 204
 	}
 
-	respond @blocked-paths 403
+	respond @blocked-put 403
+	respond @blocked-post 403
 	
 	reverse_proxy immich-server:3001
 	log {
