@@ -13,7 +13,7 @@ server:
 
     <a class="underline" href="javascript:
       email = document.getElementById('email');
-      email.value = 'demo@immich.app';
+      email.value = 'demo|immich.app'.replace('|', '@');
       email.dispatchEvent(new Event('input'));
       password = document.getElementById('password');
       password.value = 'demo';
