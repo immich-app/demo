@@ -5,7 +5,7 @@ demo.immich.app {
 		path /api/users/me
 		path /api/admin/users/*
 		path /api/users/profile-image
-		path /api/assets/original
+		path /api/assets/*/original
 		path /api/auth/change-password
 	}
 
