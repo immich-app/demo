@@ -3,24 +3,8 @@ version: "3.8"
 services:
   immich-server:
     image: ghcr.io/immich-app/immich-server:release
-    command: [ "start.sh", "immich" ]
     ports:
       - "127.0.0.1:3001:3001"
-    volumes:
-      - library:/usr/src/app/upload
-      - ./config.yaml:/config.yaml
-    env_file:
-      - .env
-    environment:
-      - NODE_ENV=production
-    depends_on:
-      - redis
-      - database
-    restart: always
-
-  immich-microservices:
-    image: ghcr.io/immich-app/immich-server:release
-    command: [ "start.sh", "microservices" ]
     volumes:
       - library:/usr/src/app/upload
       - ./config.yaml:/config.yaml
