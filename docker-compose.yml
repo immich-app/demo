@@ -4,7 +4,7 @@ services:
   immich-server:
     image: ghcr.io/immich-app/immich-server:release
     ports:
-      - "127.0.0.1:3001:3001"
+      - "127.0.0.1:2283:2283"
     volumes:
       - library:/usr/src/app/upload
       - ./config.yaml:/config.yaml

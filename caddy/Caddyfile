@@ -41,7 +41,7 @@ demo.immich.app {
 	respond @blocked-put 403
 	respond @blocked-post 403
 	
-	reverse_proxy immich-server:3001
+	reverse_proxy immich-server:2283
 	log {
 		output file /logs/caddy.log
 	}
