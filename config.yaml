@@ -14,9 +14,9 @@ server:
     <a class="underline" href="javascript:
       email = document.getElementById('email');
       email.value = 'demo|immich.app'.replace('|', '@');
-      email.dispatchEvent(new Event('input'));
+      email.dispatchEvent(new Event('input', { bubbles: true }));
       password = document.getElementById('password');
       password.value = 'demo';
-      password.dispatchEvent(new Event('input'));
+      password.dispatchEvent(new Event('input', { bubbles: true }));
       document.forms[0].requestSubmit();
     ">Login as demo user</a>
