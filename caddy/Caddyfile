@@ -18,6 +18,7 @@ demo.immich.app {
 		path /api/assets
 		path /api/auth/change-password
 		path /api/notifications/test-email
+		path /api/libraries
 	}
 
 	@cors_preflight method OPTIONS
