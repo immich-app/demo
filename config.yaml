@@ -9,7 +9,7 @@ server:
   loginPageMessage: |
     This is a demo instance of Immich. It is regularly reset. <br>
     
-    <b style='color: red'>Due to abuse, uploads to this instance are disabled.</b><br><br>
+    <b style='color: red'>Due to abuse, uploads to this instance are disabled.</b><br>
 
     <a class="underline" href="javascript:
       email = document.getElementById('email');
