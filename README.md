@@ -1,5 +1,10 @@
 # Demo
-This repo contains the setup for the demo instance at https://demo.immich.app/  
+This repo contains the old setup for the demo instance at https://demo.immich.app/.  
+It now lives at https://github.com/immich-app/devtools/tree/main/kubernetes/apps/preview/demo.  
+
+
+### Detail 
+
 You probably don't want to use this yourself. Instead, check out the install guide at https://docs.immich.app/docs/install/docker-compose
 
 To deploy:
